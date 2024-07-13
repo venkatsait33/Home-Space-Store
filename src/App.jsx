@@ -1,7 +1,8 @@
 import { RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./App.css";
 
-import { createBrowserRouter } from "react-router-dom";
 import {
   About,
   Cart,
@@ -17,7 +18,7 @@ import {
 } from "./pages/index.js";
 
 import { loader as landingLoader } from "./pages/Landing.jsx";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { loader as productsLoader } from "./pages/Products.jsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,9 +42,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+        loader: productsLoader(queryClient),
       },
       {
-        path: "product/:id",
+        path: "products/:id",
         element: <SingleProduct />,
       },
       {

@@ -1,5 +1,5 @@
 import { Form, Link } from "react-router-dom";
-import FormInput from "../components/FormInput";
+import FormInput from "../components/form-components/FormInput";
 import SubmitBtn from "../components/SubmitBtn";
 
 const Register = () => {
