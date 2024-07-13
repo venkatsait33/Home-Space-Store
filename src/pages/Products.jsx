@@ -1,4 +1,5 @@
 import Filters from "../components/Filters";
+import PaginationContainer from "../components/products/PaginationContainer";
 import ProductsContainer from "../components/products/ProductsContainer";
 import { customFetch } from "../utils";
 
@@ -46,6 +47,7 @@ const Products = () => {
     <div className="w-full ">
       <Filters />
       <ProductsContainer />
+      <PaginationContainer />
     </div>
   );
 };

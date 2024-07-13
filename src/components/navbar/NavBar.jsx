@@ -2,7 +2,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/userSlice";
 
 const NavBar = () => {
@@ -10,7 +10,11 @@ const NavBar = () => {
 
   const handleTheme = () => {
     dispatch(toggleTheme());
+
   };
+   const numItemsInCart = useSelector(
+     (state) => state.cartState.numItemsInCart
+   );
   return (
     <nav className=" bg-base-200">
       <div className="navbar align-element">
@@ -42,24 +46,24 @@ const NavBar = () => {
             <NavLinks />
           </ul>
         </div>
-        <div className="navbar-end">
-          {/* THEME SETUP */}
-          <label className="swap swap-rotate">
-            <input type="checkbox" onChange={handleTheme} />
-            {/* sun icon*/}
-            <BsSunFill className="w-4 h-4 swap-on" />
-            {/* moon icon*/}
-            <BsMoonFill className="w-4 h-4 swap-off" />
-          </label>
+        <div className="gap-3 navbar-end">
           {/* CART LINK */}
           <NavLink to="/cart" className="ml-4 btn btn-ghost btn-circle btn-md">
             <div className="indicator">
               <BsCart3 className="w-6 h-6" />
               <span className="badge badge-sm badge-primary indicator-item">
-                0
+                {numItemsInCart}
               </span>
             </div>
           </NavLink>
+          {/* THEME SETUP */}
+          <label className="swap swap-rotate">
+            <input type="checkbox" onChange={handleTheme} />
+            {/* sun icon*/}
+            <BsSunFill className="w-5 h-5 swap-on" />
+            {/* moon icon*/}
+            <BsMoonFill className="w-5 h-5 swap-off" />
+          </label>
         </div>
       </div>
     </nav>

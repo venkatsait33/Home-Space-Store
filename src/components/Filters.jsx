@@ -11,7 +11,7 @@ const Filters = () => {
   const { search, company, category, shipping, order, price } = params;
 
   return (
-    <Form className="grid items-center px-8 py-4 rounded-md bg-base-200 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <Form className="grid items-center px-8 py-4 rounded-md bg-base-200 gap-x-4 gap-y-8 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4">
       <FormInput
         type="search"
         label="Search Product"
