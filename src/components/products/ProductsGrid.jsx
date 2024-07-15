@@ -14,13 +14,13 @@ const ProductsGrid = () => {
           <Link
             key={product.id}
             to={`/products/${product.id}`}
-            className="transition duration-300 shadow-xl card hover:shadow-2xl"
+            className="transition duration-300 shadow-xl card hover:shadow-2xl group"
           >
             <figure className="">
               <img
                 src={image}
                 alt={title}
-                className="object-cover w-[90%] h-64 rounded-xl md:h-48"
+                className="object-cover w-[90%] h-64 rounded-xl md:h-48 transition duration-300 group-hover:scale-105 "
               />
             </figure>
             <div className="card-body">

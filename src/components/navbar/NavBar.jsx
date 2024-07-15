@@ -21,9 +21,9 @@ const NavBar = () => {
         <div className="navbar-start">
           <Link
             to="/"
-            className="items-center text-xl max-[560px]:hidden btn btn-primary"
+            className="items-center text-lg max-[560px]:hidden "
           >
-            Store
+            Home-Space
           </Link>
 
           <div className="dropdown">
