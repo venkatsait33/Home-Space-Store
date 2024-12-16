@@ -42,7 +42,7 @@ const NavBar = () => {
           </div>
         </div>
         <div className="navbar-center max-[560px]:hidden lg:flex">
-          <ul className="menu menu-horizontal">
+          <ul className="gap-3 menu menu-horizontal">
             <NavLinks />
           </ul>
         </div>

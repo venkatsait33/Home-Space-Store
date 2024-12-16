@@ -46,7 +46,14 @@ const Login = () => {
     }
   };
   return (
+    
     <section className="grid h-screen place-items-center">
+      <nav className="navbar-center"> <Link
+        to="/"
+        className="items-center text-lg tooltip link " data-tip="Home"
+      >
+        Home-Space
+      </Link></nav>
       <Form
         method="post"
         className="flex flex-col p-8 shadow-lg card w-96 bg-base-100 gap-y-4"

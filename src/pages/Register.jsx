@@ -26,6 +26,15 @@ export const action = async ({ request }) => {
 const Register = () => {
   return (
     <section className="grid h-screen place-items-center">
+
+      <nav className="navbar-center"> <Link
+        to="/"
+        className="items-center text-lg tooltip link " data-tip="Home"
+        
+      >
+        Home-Space
+      </Link>
+      </nav>
       <Form method="POST" className="flex flex-col p-8 shadow-lg card w-96 bg-base-100 gap-y-4">
         <h4 className="text-3xl font-bold text-center">Register</h4>
         <FormInput type="text" label="username" name="username" />
